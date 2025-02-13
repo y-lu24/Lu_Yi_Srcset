@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- in mobile set initial zoom level of page to 100%, set site size to equal device width-->
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<title>Responsive Images Grid</title>
+<link href="css/grid.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+	<!-- hand coded image sizes, based off design specs
+	order matters, start with largest to smallest -->
+	<div class="container">
+	<!-- min-width: the minimum width of the viewport -->
+	<!-- (min-width: 900px) responsive image breakpoint -->
+	<!-- 1200px: the size that you want/have for the image container -->
+
+		<img
+			sizes="
+				(min-width: 900px) 1200px, 
+				(min-width: 650px) 800px,
+				(min-width: 400px) 600px,
+				100vw"
+			srcset="
+				images/fes_mob-480.jpg 480w,
+				images/fes_tab-870.jpg 870w,
+				images/fes_desk-1320.jpg 1320w"
+			src="images/fes_mob-480.jpg"
+			alt="old man">		
+	</div>
+    <div class="container">
+        <!-- min-width: the minimum width of the viewport -->
+        <!-- (min-width: 900px) responsive image breakpoint -->
+        <!-- 1200px: the size that you want/have for the image container -->
+    
+            <img
+                sizes="
+                    (min-width: 900px) 1200px, 
+                    (min-width: 650px) 800px,
+                    (min-width: 400px) 600px,
+                    100vw"
+                srcset="
+                    images/girl_mob-480.jpg 480w,
+                    images/girl_tab-870.jpg 870w,
+                    images/girl_desk-1320.jpg 1320w"
+                src="images/girl_mob-480.jpg"
+                alt="old man">		
+        </div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
